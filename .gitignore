@@ -5,3 +5,5 @@
 /Warsouls/
 /FEGDE/
 /FEDGDE/
+.vercel
+.env*
