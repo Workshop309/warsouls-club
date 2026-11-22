@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AEGDE — Asociación Ecuatoguineana de Deportes Electrónicos</title>
+<meta name="description" content="AEGDE organiza, representa y desarrolla los deportes electrónicos en Guinea Ecuatorial. Miembros de la IESF desde 2025.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<noscript><style>[data-reveal]{opacity:1;transform:none}.hero__title .line>span{transform:none}</style></noscript>
+<link rel="icon" href="assets/aegde-mark.png" type="image/png">
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<div class="scroll-progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+<header class="site-head" id="siteHead">
+  <div class="wrap site-head__inner">
+    <a class="brand" href="#top" aria-label="AEGDE, inicio">
+      <img class="brand__mark" src="assets/aegde-mark.png" alt="" width="42" height="42">
+      <span class="brand__text">
+        <strong>AEGDE</strong>
+        <small>Deportes electrónicos · GQ</small>
+      </span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">
+      <span></span><span></span>
+      <span class="sr-only">Abrir menú</span>
+    </button>
+
+    <nav class="nav" id="primaryNav" aria-label="Principal">
+      <a href="#asociacion">Asociación</a>
+      <a href="#disciplinas">Disciplinas</a>
+      <a href="#trayectoria">Trayectoria</a>
+      <a href="#proyectos">Proyectos</a>
+      <a class="nav__cta" href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <canvas class="hero__circuit" id="circuit" aria-hidden="true"></canvas>
+    <div class="hero__glow" aria-hidden="true"></div>
+
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <p class="eyebrow" data-reveal>
+          <span class="dot" aria-hidden="true"></span>
+          Asociación Ecuatoguineana de Deportes Electrónicos
+        </p>
+
+        <h1 class="hero__title" aria-label="Donde Guinea compite">
+          <span class="line"><span style="--d:.05s">Donde</span></span>
+          <span class="line"><span class="accent" style="--d:.16s">Guinea</span></span>
+          <span class="line"><span style="--d:.27s">compite</span></span>
+        </h1>
+
+        <p class="hero__lead" data-reveal style="--i:1">
+          Organizamos torneos, formamos jugadores y representamos a Guinea Ecuatorial
+          en la escena internacional de los deportes electrónicos.
+        </p>
+
+        <div class="hero__actions" data-reveal style="--i:2">
+          <a class="btn btn--solid" href="#disciplinas">Ver disciplinas</a>
+          <a class="btn btn--ghost" href="#contacto">Hablar con AEGDE</a>
+        </div>
+
+        <ul class="hero__meta" data-reveal style="--i:3">
+          <li><strong>IESF</strong> Miembro desde 2025</li>
+          <li><strong>COGE</strong> Registro deportivo nacional</li>
+        </ul>
+      </div>
+
+      <div class="hero__stage" data-reveal style="--i:2">
+        <div class="crest">
+          <div class="crest__frame">
+            <img src="assets/aegde-crest.png" alt="Escudo oficial de la Asociación Ecuatoguineana de Deportes Electrónicos" width="940" height="1000">
+          </div>
+          <div class="crest__tag">
+            <span>Associate member</span>
+            <span class="crest__tag-region">África · 2025</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <dl class="scoreboard">
+        <div class="stat" data-reveal>
+          <dt>Miembro IESF</dt>
+          <dd><span data-count="2025" data-plain="true">2025</span></dd>
+          <p>Federación Internacional de Esports</p>
+        </div>
+        <div class="stat" data-reveal style="--i:1">
+          <dt>Países en juego</dt>
+          <dd><span data-count="3">3</span></dd>
+          <p>Camerún, Gabón y Guinea Ecuatorial</p>
+        </div>
+        <div class="stat" data-reveal style="--i:2">
+          <dt>Bolsa regional</dt>
+          <dd><span data-count="105000" data-format="thousand">105.000</span><small>FCFA</small></dd>
+          <p>Torneo LET × KEZA × AEGDE</p>
+        </div>
+        <div class="stat" data-reveal style="--i:3">
+          <dt>Disciplinas activas</dt>
+          <dd><span data-count="5">5</span><small>+</small></dd>
+          <p>Lucha, fútbol, naruto y más</p>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ASOCIACIÓN -->
+  <section class="section section--split" id="asociacion">
+    <div class="wrap split">
+      <div class="split__head">
+        <p class="eyebrow" data-reveal>La asociación</p>
+        <h2 class="display" data-reveal style="--i:1">
+          Un escudo.<br>Un ecosistema.
+        </h2>
+      </div>
+
+      <div class="split__body">
+        <p class="lede" data-reveal>
+          AEGDE no es solo un canal de contenido sobre videojuegos. Es la entidad que
+          reúne a jugadores, clubes y organizadores para que competir en Guinea Ecuatorial
+          tenga reglas, calendario y futuro.
+        </p>
+        <p data-reveal style="--i:1">
+          Desde enero de 2025 organiza clasificatorios y rankings nacionales para identificar
+          a los mejores jugadores del país. En marzo de ese mismo año la International Esports
+          Federation incorporó a Guinea Ecuatorial a su directorio, con AEGDE como organización
+          nacional representante. El Anuario Estadístico 2024 del INEGE ya recogía a la
+          asociación entre las entidades deportivas del COGE.
+        </p>
+        <p data-reveal style="--i:2">
+          El trabajo también pasa por la divulgación: jornadas sobre la evolución del videojuego
+          y sus salidas profesionales, colaboraciones con el Instituto Francés de Malabo y
+          torneos regionales junto a organizaciones de Camerún y Gabón.
+        </p>
+
+        <ul class="role-list">
+          <li data-reveal><span>Competición</span> Torneos y rankings nacionales.</li>
+          <li data-reveal style="--i:1"><span>Representación</span> Guinea Ecuatorial en el exterior.</li>
+          <li data-reveal style="--i:2"><span>Formación</span> Talleres, streaming y desarrollo.</li>
+          <li data-reveal style="--i:3"><span>Comunidad</span> Jugadores de todo el país.</li>
+          <li data-reveal style="--i:4"><span>Industria</span> Marcas, patrocinadores y tecnología.</li>
+          <li data-reveal style="--i:5"><span>Talento</span> Detección de jugadores competitivos.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- RIBBON -->
+  <div class="ribbon" aria-hidden="true">
+    <div class="ribbon__track">
+      <span>Tekken 8</span><i>◆</i><span>EA Sports FC 26</span><i>◆</i><span>Street Fighter 6</span><i>◆</i><span>Mortal Kombat 1</span><i>◆</i><span>Naruto × Boruto</span><i>◆</i><span>Malabo</span><i>◆</i><span>Bata</span><i>◆</i>
+      <span>Tekken 8</span><i>◆</i><span>EA Sports FC 26</span><i>◆</i><span>Street Fighter 6</span><i>◆</i><span>Mortal Kombat 1</span><i>◆</i><span>Naruto × Boruto</span><i>◆</i><span>Malabo</span><i>◆</i><span>Bata</span><i>◆</i>
+    </div>
+  </div>
+
+  <!-- DISCIPLINAS -->
+  <section class="section" id="disciplinas">
+    <div class="wrap">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow" data-reveal>Disciplinas</p>
+          <h2 class="display" data-reveal style="--i:1">Donde se decide<br>el ranking</h2>
+        </div>
+        <p class="section__note" data-reveal style="--i:2">
+          Torneos, clasificatorios y exhibiciones. El objetivo de cada enfrentamiento es
+          el mismo: saber quién es el mejor jugador del país.
+        </p>
+      </div>
+
+      <div class="games">
+        <article class="game" data-tilt data-reveal>
+          <span class="game__genre">Lucha 3D</span>
+          <h3>Tekken 8</h3>
+          <p>Clasificatorios y ranking nacional.</p>
+          <span class="game__idx" aria-hidden="true">01</span>
+        </article>
+        <article class="game" data-tilt data-reveal style="--i:1">
+          <span class="game__genre">Fútbol</span>
+          <h3>EA Sports FC 26</h3>
+          <p>Disciplina del circuito regional.</p>
+          <span class="game__idx" aria-hidden="true">02</span>
+        </article>
+        <article class="game" data-tilt data-reveal style="--i:2">
+          <span class="game__genre">Lucha 2D</span>
+          <h3>Street Fighter 6</h3>
+          <p>Enfrentamientos y exhibiciones.</p>
+          <span class="game__idx" aria-hidden="true">03</span>
+        </article>
+        <article class="game" data-tilt data-reveal style="--i:3">
+          <span class="game__genre">Lucha 2D</span>
+          <h3>Mortal Kombat 1</h3>
+          <p>Formato competitivo a varias partidas.</p>
+          <span class="game__idx" aria-hidden="true">04</span>
+        </article>
+        <article class="game" data-tilt data-reveal style="--i:4">
+          <span class="game__genre">Arena</span>
+          <h3>Naruto × Boruto</h3>
+          <p>Ultimate Ninja Storm Connections.</p>
+          <span class="game__idx" aria-hidden="true">05</span>
+        </article>
+        <article class="game game--open" data-reveal style="--i:5">
+          <span class="game__genre">Abierto</span>
+          <h3>Tu disciplina</h3>
+          <p>Propón el próximo torneo de la asociación.</p>
+          <a class="game__link" href="#contacto">Enviar propuesta</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAYECTORIA -->
+  <section class="section section--timeline" id="trayectoria">
+    <div class="wrap">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow" data-reveal>Trayectoria</p>
+          <h2 class="display" data-reveal style="--i:1">De un torneo<br>a una federación</h2>
+        </div>
+        <p class="section__note" data-reveal style="--i:2">
+          Fechas verificadas en fuentes públicas. La línea temporal se detiene en lo
+          documentado, no en lo que nos gustaría contar.
+        </p>
+      </div>
+
+      <ol class="timeline">
+        <li class="tl" data-reveal>
+          <span class="tl__date">13 nov 2024</span>
+          <div class="tl__body">
+            <h3>Jornada sobre videojuegos y esports</h3>
+            <p>Instituto Francés de Guinea Ecuatorial, Malabo. Evolución del medio, proyectos independientes y salidas profesionales, junto a la Fundación Identic.</p>
+          </div>
+        </li>
+        <li class="tl" data-reveal style="--i:1">
+          <span class="tl__date">Ene 2025</span>
+          <div class="tl__body">
+            <h3>Clasificatorio nacional de Tekken 8</h3>
+            <p>Combates publicados con un objetivo explícito: determinar quién era el mejor jugador nacional.</p>
+          </div>
+        </li>
+        <li class="tl tl--major" data-reveal style="--i:2">
+          <span class="tl__date">17 mar 2025</span>
+          <div class="tl__body">
+            <h3>Ingreso en la IESF</h3>
+            <p>La International Esports Federation anuncia la incorporación de cinco países, entre ellos Guinea Ecuatorial, con AEGDE como organización nacional. Membresía <em>Associate</em>, región África.</p>
+          </div>
+        </li>
+        <li class="tl" data-reveal style="--i:3">
+          <span class="tl__date">Nov 2025</span>
+          <div class="tl__body">
+            <h3>LET × KEZA × AEGDE</h3>
+            <p>Torneo con Camerún, Gabón y Guinea Ecuatorial en tres disciplinas, clasificatorias en línea y finales presenciales en Libreville. 105.000 FCFA en premios.</p>
+          </div>
+        </li>
+        <li class="tl tl--next" data-reveal style="--i:4">
+          <span class="tl__date">Siguiente</span>
+          <div class="tl__body">
+            <h3>Campeonato Nacional</h3>
+            <p>Clasificatorias en Malabo y Bata, final nacional única y calendario anual publicado.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section class="section" id="proyectos">
+    <div class="wrap">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow" data-reveal>Hoja de ruta</p>
+          <h2 class="display" data-reveal style="--i:1">Seis frentes<br>abiertos</h2>
+        </div>
+        <p class="section__note" data-reveal style="--i:2">
+          Del torneo suelto al ecosistema permanente. Cada frente necesita aliados:
+          instituciones, marcas y jugadores.
+        </p>
+      </div>
+
+      <ul class="projects">
+        <li data-reveal>
+          <h3>Campeonato Nacional de eSports</h3>
+          <p>Competición anual con clasificatorias en Malabo, Bata y otras localidades, y una gran final nacional.</p>
+          <span>Competición</span>
+        </li>
+        <li data-reveal style="--i:1">
+          <h3>Selección Nacional</h3>
+          <p>Equipos por disciplina para representar a Guinea Ecuatorial en citas internacionales.</p>
+          <span>Representación</span>
+        </li>
+        <li data-reveal style="--i:2">
+          <h3>Programa de formación</h3>
+          <p>Talleres de competición, comunicación, streaming, creación de contenido y desarrollo de videojuegos.</p>
+          <span>Formación</span>
+        </li>
+        <li data-reveal style="--i:3">
+          <h3>Programa de patrocinadores</h3>
+          <p>Paquetes comerciales para telecomunicaciones, tecnología, banca y marcas de consumo.</p>
+          <span>Industria</span>
+        </li>
+        <li data-reveal style="--i:4">
+          <h3>Plataforma digital</h3>
+          <p>Registro de jugadores, rankings, calendario, resultados, torneos y noticias en un solo lugar.</p>
+          <span>Producto</span>
+        </li>
+        <li data-reveal style="--i:5">
+          <h3>Expansión regional</h3>
+          <p>Alianzas con asociaciones de Camerún, Gabón, Nigeria y el resto de África Central.</p>
+          <span>Alianzas</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- COMUNIDAD -->
+  <section class="community">
+    <div class="wrap community__inner">
+      <div>
+        <p class="eyebrow" data-reveal>Comunidad</p>
+        <h2 class="display" data-reveal style="--i:1">La partida<br>sigue fuera<br>de la consola</h2>
+      </div>
+      <div class="community__links" data-reveal style="--i:2">
+        <a href="https://www.youtube.com/channel/UCWlKNpOXB94Inx3yWv3pdgw" target="_blank" rel="noopener">
+          <span>YouTube</span><em>AEGDE Esport</em>
+        </a>
+        <a href="https://www.instagram.com/aegde_game/" target="_blank" rel="noopener">
+          <span>Instagram</span><em>@aegde_game</em>
+        </a>
+        <a href="https://www.tiktok.com/@aegdegamer1" target="_blank" rel="noopener">
+          <span>TikTok</span><em>@aegdegamer1</em>
+        </a>
+        <a href="https://iesf.org/members/geq" target="_blank" rel="noopener">
+          <span>IESF</span><em>Perfil oficial</em>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section contact" id="contacto">
+    <div class="wrap contact__grid">
+      <div class="contact__copy">
+        <p class="eyebrow" data-reveal>Contacto</p>
+        <h2 class="display" data-reveal style="--i:1">¿Organizamos<br>algo juntos?</h2>
+        <p data-reveal style="--i:2">
+          Jugadores, clubes, marcas e instituciones: si quieres competir o apoyar el
+          ecosistema, escríbenos.
+        </p>
+        <a class="mail" href="mailto:asociacionegde@gmail.com" data-reveal style="--i:3">
+          asociacionegde@gmail.com
+        </a>
+      </div>
+
+      <div class="contact__card" data-reveal style="--i:2">
+        <h3>Sede y presencia</h3>
+        <dl>
+          <div><dt>Base</dt><dd>Malabo, Guinea Ecuatorial</dd></div>
+          <div><dt>Internacional</dt><dd>Miembro IESF · Associate · África</dd></div>
+          <div><dt>Nacional</dt><dd>Registro deportivo COGE</dd></div>
+          <div><dt>Teléfono</dt><dd>+240 222 776 597 <small>(por confirmar)</small></dd></div>
+        </dl>
+        <p class="contact__fine">
+          Datos tomados del directorio de la IESF y de publicaciones públicas de la asociación.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap site-foot__inner">
+    <div class="site-foot__brand">
+      <img src="assets/aegde-mark.png" alt="" width="34" height="34">
+      <p><strong>AEGDE</strong><br>Asociación Ecuatoguineana de Deportes Electrónicos</p>
+    </div>
+    <nav class="site-foot__nav" aria-label="Pie de página">
+      <a href="#asociacion">Asociación</a>
+      <a href="#disciplinas">Disciplinas</a>
+      <a href="#trayectoria">Trayectoria</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <p class="site-foot__note">© <span id="year">2026</span> AEGDE · Malabo, Guinea Ecuatorial</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
