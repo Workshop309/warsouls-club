@@ -399,30 +399,98 @@ a, button { touch-action: manipulation; -webkit-tap-highlight-color: rgba(51, 19
   line-height: 1.05;
 }
 
-/* ---------- foto de grupo ---------- */
+/* ---------- carrusel de imágenes ---------- */
 .band { padding-top: clamp(1rem, 2.5vw, 1.6rem); padding-bottom: clamp(2.6rem, 5vw, 4rem); }
-.band__sheet {
-  margin: 0;
-  padding: 12px 12px 8px;
+
+.banner { position: relative; }
+.banner__frame {
+  padding: 12px 12px 0;
   background: var(--paper);
   box-shadow:
     0 30px 50px -34px rgba(17, 20, 22, .55),
     0 0 0 1px rgba(17, 20, 22, .06);
-  transform: rotate(-.45deg);
+  transform: rotate(-.35deg);
 }
-.band__sheet img {
+.banner__viewport {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #dfe4e6;
+}
+.banner__slide {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .7s var(--ease), visibility .7s;
+}
+.banner__slide.is-on { opacity: 1; visibility: visible; }
+.banner__slide img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 36%;
 }
-.band__cap {
+.banner__cap {
+  position: absolute;
+  inset: auto 0 0 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: .4rem 1.5rem;
-  padding: .7rem .25rem .2rem;
-  font-size: .76rem;
-  color: var(--ink-45);
+  gap: .3rem 1.5rem;
+  padding: 2.6rem 1.1rem .85rem;
+  background: linear-gradient(to top, rgba(17, 20, 22, .8), rgba(17, 20, 22, 0));
+  color: var(--paper);
+  font-size: .8rem;
+  line-height: 1.4;
 }
+.banner__cap span:last-child { color: rgba(251, 251, 249, .7); }
+
+.banner__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .8rem .2rem 0;
+}
+.banner__dots { display: flex; gap: .4rem; }
+.banner__dot {
+  width: 34px;
+  height: 6px;
+  padding: 0;
+  border: 0;
+  background: var(--rule-strong);
+  cursor: pointer;
+  transition: background-color .2s var(--ease);
+}
+.banner__dot:hover { background: var(--ink-45); }
+.banner__dot[aria-current="true"] { background: var(--ice-ink); }
+
+.banner__arrows { display: flex; gap: .5rem; }
+.banner__btn {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 2px solid var(--ink);
+  border-radius: 2px;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  transition: background-color .18s var(--ease), color .18s var(--ease);
+}
+.banner__btn svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.banner__btn:hover { background: var(--ink); color: var(--paper); }
 
 /* ---------- secciones ---------- */
 .sec {
@@ -493,25 +561,6 @@ a, button { touch-action: manipulation; -webkit-tap-highlight-color: rgba(51, 19
 .fines span {
   font-size: .91rem;
   color: var(--ink-70);
-}
-
-.quote {
-  margin: clamp(2.2rem, 5vw, 3.4rem) 0 0;
-  max-width: 56ch;
-  padding: .2rem 0 .2rem 1.3rem;
-  border-left: 4px solid var(--ice);
-}
-.quote blockquote { margin: 0; }
-.quote p {
-  font-size: clamp(1.06rem, 1.4vw, 1.24rem);
-  line-height: 1.5;
-  color: var(--ink);
-  font-weight: 500;
-}
-.quote figcaption {
-  margin-top: .7rem;
-  font-size: .78rem;
-  color: var(--ink-45);
 }
 
 /* ---------- identidad ---------- */
@@ -882,56 +931,55 @@ a, button { touch-action: manipulation; -webkit-tap-highlight-color: rgba(51, 19
   color: var(--ink-70);
 }
 
-/* ---------- equipo ---------- */
-.team {
-  display: grid;
-  grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr);
-  gap: clamp(2rem, 5vw, 4.5rem);
-  align-items: start;
-}
-
-.roster {
-  margin: 0;
-  border-top: 2px solid var(--ink);
-}
-.roster > div {
-  display: grid;
-  grid-template-columns: 10rem minmax(0, 1fr);
-  gap: 1.4rem;
-  padding: .85rem 0 .95rem;
-  border-bottom: 1px solid var(--rule);
-}
-.roster dt {
-  font-size: .78rem;
-  color: var(--ink-45);
-  padding-top: .22rem;
-}
-.roster dd {
-  margin: 0;
-  font-weight: 700;
-  line-height: 1.45;
-}
-
-.areas {
+/* ---------- redes ---------- */
+.redes { padding-bottom: clamp(3.4rem, 7vw, 6rem); }
+.socials {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1.4rem;
-  margin-top: clamp(2.4rem, 5vw, 3.6rem);
-  padding-top: 1.3rem;
-  border-top: 2px solid var(--ink);
+  gap: clamp(1rem, 2.4vw, 1.6rem);
+  margin: clamp(2rem, 4vw, 2.8rem) 0 0;
+  padding: 0;
+  list-style: none;
 }
-.area h3 {
+.social {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+  height: 100%;
+  padding: 1.4rem 1.25rem 1.5rem;
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  box-shadow: 6px 6px 0 var(--ice);
+  transition: transform .18s var(--ease), box-shadow .18s var(--ease);
+}
+.social:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 10px 10px 0 var(--ink);
+}
+.social__icon {
+  display: block;
+  width: 68px;
+  height: 68px;
+  margin-bottom: .7rem;
+}
+.social__icon svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--ink);
+  transition: fill .18s var(--ease);
+}
+.social:hover .social__icon svg { fill: var(--ice-ink); }
+.social__name {
   font-family: var(--display);
   font-weight: 800;
   text-transform: uppercase;
-  font-size: 1.26rem;
+  font-size: 1.55rem;
   line-height: 1;
 }
-.area p {
-  margin-top: .45rem;
-  font-size: .85rem;
-  line-height: 1.45;
-  color: var(--ink-70);
+.social__handle {
+  font-size: .82rem;
+  color: var(--ink-45);
+  overflow-wrap: anywhere;
 }
 
 /* ---------- ficha ---------- */
@@ -991,11 +1039,6 @@ a, button { touch-action: manipulation; -webkit-tap-highlight-color: rgba(51, 19
   text-underline-offset: 3px;
 }
 .profile__list a:hover { text-decoration-color: var(--paper); }
-.profile__tag {
-  font-weight: 400;
-  font-size: .82rem;
-  color: rgba(251, 251, 249, .62);
-}
 
 /* ---------- pie ---------- */
 .foot {
@@ -1101,7 +1144,6 @@ a, button { touch-action: manipulation; -webkit-tap-highlight-color: rgba(51, 19
 
   .club,
   .sala,
-  .team,
   .ident__head,
   .mv,
   .events__head,
@@ -1118,7 +1160,7 @@ a, button { touch-action: manipulation; -webkit-tap-highlight-color: rgba(51, 19
   .sala__shots { max-width: 34rem; }
   .note { max-width: 36rem; transform: rotate(.4deg); }
   .house__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.6rem 2rem; }
-  .areas { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.6rem 2rem; }
+  .socials { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 840px) {
@@ -1179,6 +1221,7 @@ a, button { touch-action: manipulation; -webkit-tap-highlight-color: rgba(51, 19
   .shot--a { transform: rotate(-1.2deg); }
   .shot--b { transform: rotate(1.4deg); }
   .fines li { grid-template-columns: 8rem minmax(0, 1fr); gap: 1rem; }
+  .banner__viewport { aspect-ratio: 4 / 3; }
   .foot__in { flex-direction: column; }
 }
 
@@ -1187,11 +1230,14 @@ a, button { touch-action: manipulation; -webkit-tap-highlight-color: rgba(51, 19
   .wall__field { width: 74%; left: 8%; }
   .hero__wall { min-height: 300px; padding-top: 1.4rem; }
   .house__grid { grid-template-columns: 1fr; }
-  .areas { grid-template-columns: 1fr; }
   .goals { grid-template-columns: 1fr; gap: 1.1rem; }
   .fines li { grid-template-columns: 1fr; gap: .25rem; }
-  .roster > div { grid-template-columns: 1fr; gap: .15rem; }
-  .roster dt { padding-top: 0; }
+  .socials { grid-template-columns: 1fr; }
+  .social { flex-direction: row; align-items: center; flex-wrap: wrap; gap: .2rem 1rem; }
+  .social__icon { width: 46px; height: 46px; margin-bottom: 0; }
+  .social__handle { flex-basis: 100%; padding-left: 0; }
+  .banner__dot { width: 26px; }
+  .banner__cap { font-size: .74rem; padding: 2.2rem .8rem .7rem; }
   .brief li { grid-template-columns: 6rem minmax(0, 1fr); }
   .profile__list > div { grid-template-columns: 1fr; gap: .15rem; }
   .sala__shots { grid-template-columns: 1fr; gap: 1rem; }
